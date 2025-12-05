@@ -21,9 +21,69 @@ li {
   margin-bottom: 10px;
   font-size: 16px;
 }
-nav {
-  margin-bottom: 20px;
-  align-content: flex-end;
+/* NAVBAR */
+.navbar {
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 16px;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* MOBILE NAV */
+@media (max-width: 600px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-brand {
+        text-align: left;
+        width: auto;
+    }
 }
 .dark-mode {
   background-color: black;
@@ -54,39 +114,21 @@ input{
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 8px;
 }
     
 .header {
-    grid-column: span 3 / span 3;
+    grid-column: span 2 / span 2;
     text-align: center;
     border: #333333 1px solid;
     border-radius: 16px;
-}
-
-.footer {
-    grid-column: span 3 / span 3;
-    grid-column-start: 1;
-    grid-row-start: 5;
-    text-align: center;
-    border: #333333 1px solid;
-    border-radius: 16px;
-}
-
-.socials {
-    grid-row: span 3 / span 3;
-    grid-column-start: 1;
-    grid-row-start: 2;
-    border: #333333 1px solid;
-    border-radius: 16px;
-    text-align: center;
 }
 
 .aboutme {
-    grid-row: span 3 / span 3;
-    grid-column-start: 2;
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
     grid-row-start: 2;
     border: #333333 1px solid;
     border-radius: 16px;
@@ -95,11 +137,24 @@ input{
 
 .contact {
     grid-row: span 3 / span 3;
-    grid-column-start: 3;
-    grid-row-start: 2;
+    grid-row-start: 4;
     border: #333333 1px solid;
     border-radius: 16px;
     text-align: center;
+}
+.socials {
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+    border: #333333 1px solid;
+    border-radius: 16px;
+    text-align: center;
+}
+.footer {
+     grid-column: span 2 / span 2;
+    grid-row-start: 7;
+    text-align: center;
+    border: #333333 1px solid;
+    border-radius: 16px;
 }
 .contact:hover, .aboutme:hover, .socials:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
