@@ -52,7 +52,7 @@ input{
     height: 150px;
     
 }
-.parent {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -62,13 +62,17 @@ input{
 .header {
     grid-column: span 3 / span 3;
     text-align: center;
+    border: #333333 1px solid;
+    border-radius: 16px;
 }
 
 .footer {
     grid-column: span 3 / span 3;
     grid-column-start: 1;
     grid-row-start: 5;
-    text-align: center;;
+    text-align: center;
+    border: #333333 1px solid;
+    border-radius: 16px;
 }
 
 .socials {
