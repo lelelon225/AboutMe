@@ -41,6 +41,10 @@ li {
     width: auto;
     justify-content: flex-start;
 }
+.darkmode-icon {
+    height: 20px;
+    width: auto;
+}
 
 /* NAVBAR */
 .navbar {
