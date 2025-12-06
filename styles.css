@@ -126,6 +126,12 @@ input{
     grid-template-rows: repeat(7, 1fr);
     gap: 8px;
 }
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
     
 .header {
     grid-column: span 2 / span 2;
